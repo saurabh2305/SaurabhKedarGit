@@ -15,6 +15,7 @@ export class EmpListComponent implements OnInit {
 
 
   userArray: User[]= [];
+  id: string ;
   
   constructor(private employeeServiceObj: EmployeeListServiceService, private activatedRoute: ActivatedRoute, private route: Router)
   {
@@ -36,6 +37,11 @@ export class EmpListComponent implements OnInit {
    this.route.navigate(['./ShowEmployeeDetailss']);
   }
 
-  
+  EditEmployee(userid: string) :void
+  {
+    // this.id =  userid.value;
+    this.id =  userid;
+    this.route.navigate(['./ShowEmployeeDetailss', this.id] );
+  }  
 
 }

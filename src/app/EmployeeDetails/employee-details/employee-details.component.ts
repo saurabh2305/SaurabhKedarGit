@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 // import { User } from './app/Employee/User';
 // import { EmployeeListServiceService } from './app/Employee/employee-list-service.service';
 
@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./employee-details.component.css']
 })
 export class EmployeeDetailsComponent implements OnInit {
+  @Input() id: string;
 
   // userArray: User[]= [];
   
@@ -22,6 +23,7 @@ export class EmployeeDetailsComponent implements OnInit {
   }
 
   ngOnInit() {   
+   
   }
 
   // ngOnInit() {    

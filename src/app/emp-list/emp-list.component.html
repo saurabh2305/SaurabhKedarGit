@@ -1,0 +1,50 @@
+<h1>
+  {{title}}
+
+</h1>
+
+
+
+<a routerLink="" routerLinkActive="active">Go To Home Page</a>
+<input type="button" class="btn btn-warning" (click)="NavigteEmployeeDetails()" value="Go to Employee Detail">
+
+
+
+
+<div class="container">
+
+  <table class="table table-bordered">
+    <tr class="active">
+      <th>
+        User ID
+      </th>
+      <th>
+        Id
+      </th>
+      <th>
+        Title
+      </th>
+      <th>
+        Edit
+      </th>
+    </tr>
+    <tr class="active" *ngFor="let emp of userArray">
+      <td>
+        <span>{{emp.userId}}</span>
+      </td>
+      <td>
+        <span>{{emp.id}} </span>
+      </td>
+      <td>
+        <span>{{emp.title}} </span>
+      </td>
+      <td>
+        <input type="button" value="Edit" (click)="EditEmployee(emp.id)" />
+      </td>
+    </tr>
+  </table>
+  <!--ul class="pagination">
+      <pagination-controls id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="p = $event"></pagination-controls>
+      | paginate: {id: 'listing_pagination', itemsPerPage: 10, currentPage: p }
+  </ul>-->
+</div>

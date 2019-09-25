@@ -11,7 +11,8 @@ import { EmpListComponent } from './emp-list/emp-list.component';
 
 const appRoute: Routes = [
   { path: 'EmployeeList', component: EmpListComponent },
-  { path: 'ShowEmployeeDetailss', component: EmployeeDetailsComponent },
+  { path: 'ShowEmployeeDetailss/:id', component: EmployeeDetailsComponent },
+  { path: '', redirectTo: '', pathMatch: 'full'}
 ];
 
 @NgModule({
